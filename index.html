@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker Responsive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="./bahan/logo.png" alt="logo"></a>
+        <div class="toogle"><img src="./bahan/toggle.png" alt="toogle"></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>Put On a <span>Happy</span> face</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eveniet expedita possimus ipsa recusandae
+                commodi quisquam laborum enim nostrum eius? Ab tempora consectetur vero, repellendus voluptatibus rem
+                reiciendis modi mollitia.</p>
+            <a href="#" class="play" onclick="toogle();"><img src="./bahan/play.png">Watch Trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+                <li><a href="#"><img src="./bahan/facebook.png"></a></li>
+                <li><a href="#"><img src="./bahan/instagram.png"></a></li>
+                <li><a href="#"><img src="./bahan/twitter.png"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- TRAILER----------------------------------------- -->
+    <div class="trailer">
+        <video src="./bahan/trailer1.mp4" controls="true"></video>
+        <img src="./bahan/close.png" class="close" onclick="toogle();">
+    </div>
+
+    <script type="text/javascript">
+        function toogle() {
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('.video');
+            trailer.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+
+</body>
+
+</html>
